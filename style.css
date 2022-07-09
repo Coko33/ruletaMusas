@@ -1,0 +1,11 @@
+h1 {
+  position: absolute;
+  text-align: center;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  display: block;
+  top: 100px;
+  width: 100%;
+  font-size: 500px;
+  margin: 0;
+  color: rgb(66, 255, 81);
+}
