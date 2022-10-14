@@ -1,11 +1,153 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+body {
+  background-color: #ed1e79;
+  margin: 0;
+}
+.presentacion {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+.corazonContainer {
+  position: relative;
+  width: 500px;
+  height: 500px;
+  margin-bottom: 50px;
+}
+.corazon {
+  position: absolute;
+  width: 100%;
+}
+.tituloPortada {
+  width: 100%;
+  position: relative;
+  margin-bottom: 90px;
+}
+@keyframes flicker {
+  0%,
+  20%,
+  24%,
+  100% {
+    -webkit-filter: none;
+    filter: none;
+  }
+
+  22%,
+  26%,
+  100% {
+    -webkit-filter: drop-shadow(0 0 7px #fa13e7) drop-shadow(0 0 10px #fa13e7)
+      drop-shadow(0 0 21px #fa13e7) drop-shadow(0 0 42px #fa13e7);
+    filter: drop-shadow(0 0 7px #fa13e7) drop-shadow(0 0 10px #fa13e7)
+      drop-shadow(0 0 21px #fa13e7) drop-shadow(0 0 42px #fa13e7);
+  }
+}
+@keyframes apaga {
+  0%,
+  20%,
+  24%,
+  100% {
+    opacity: 0;
+  }
+
+  22%,
+  26%,
+  100% {
+    opacity: 1;
+  }
+}
+
+#Capa_1 {
+  animation: flicker 4s infinite;
+}
+
+#Capa_2 {
+  animation: apaga 4s infinite, flicker 4s infinite;
+}
+
+#containerFigus {
+  position: relative;
+  width: 80%;
+  height: 500px;
+  display: grid;
+  place-items: center;
+  background-color: rgba(140, 189, 235, 0);
+}
+#containerFigus img {
+  position: absolute;
+  display: block;
+  width: auto;
+  max-height: 400px;
+}
 h1 {
   position: absolute;
   text-align: center;
-  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-family: Barlow, sans-serif;
+  font-weight: 800;
   display: block;
-  top: 100px;
   width: 100%;
-  font-size: 500px;
+  font-size: 70px;
   margin: 0;
-  color: rgb(66, 255, 81);
+  color: rgb(0, 0, 0);
+  z-index: 500;
+}
+#ini {
+  position: absolute;
+  bottom: 50px;
+}
+
+#juego {
+  display: none;
+  position: absolute;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  background-color: #ed1e79;
+  z-index: 500;
+}
+
+.musasContainer {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+}
+
+.musasTitulo {
+  position: absolute;
+  top: 50px;
+}
+
+.header {
+  position: absolute;
+  width: 100%;
+  height: 200px;
+}
+
+.corazonContainerChico {
+  position: relative;
+  width: 100px;
+  top: 50px;
+  left: 50px;
+}
+
+#ini {
+  height: 50px;
+  width: 170px;
+  font-family: Barlow, sans-serif;
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 50px;
+  text-align: center;
+}
+
+#ini:hover {
+  cursor: pointer;
 }
